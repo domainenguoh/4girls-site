@@ -11,15 +11,14 @@ const Index = () => {
     setExpandedPaper(expandedPaper === paperId ? null : paperId);
   };
 
-  const openPDF = (pdfName: string) => {
-    // This would open the PDF - you can replace with actual PDF URLs
-    window.open(`/pdfs/${pdfName}.pdf`, '_blank');
-  };
+ const openPDF = (pdfName: string) => {
+  window.open(`${import.meta.env.BASE_URL}pdfs/${pdfName}.pdf`, '_blank');
+};
 
-    const openPPT = (pptName: string) => {
-   // This would open the PPT
-   window.open(`/ppts/${pptName}.pptx`, '_blank');
-  };
+const openPPT = (pptName: string) => {
+  window.open(`${import.meta.env.BASE_URL}ppts/${pptName}.pptx`, '_blank');
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-white">
