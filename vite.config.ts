@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   // Use correct base for GitHub Pages deployment
-  base: "/4girls/",  // ← important for GH Pages
+  base: "/4girls-site/",  // ← important for GH Pages
   server: {
     host: "::",
     port: 8080,

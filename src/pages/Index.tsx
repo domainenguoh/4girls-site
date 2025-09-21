@@ -298,6 +298,24 @@ const Index = () => {
             </Card>
           </div>
 
+           {/* New Card about how we found and evolved the system */}
+          <Card className="bg-white/70 backdrop-blur-sm border-purple-100 mb-12">
+            <CardHeader>
+              <CardTitle className="text-2xl text-gray-800">How We Found and Evolved Our System</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-700 leading-relaxed">
+                To build our project, we first explored several GitHub repositories related to UML generation. 
+                After testing different approaches, we settled on a project that our teammate <strong>Nadine</strong> discovered. 
+                This system already integrated <strong>PlantUML</strong>, which aligned perfectly with our initial plan. 
+                However, the original implementation only supported <em>class diagrams</em>. 
+                We used that as our starting point and gradually expanded the system, connecting it more deeply with PlantUML 
+                and extending its capabilities to support multiple UML diagram types. 
+                This process gave us both a foundation to build on and the flexibility to shape the tool according to our vision.
+              </p>
+            </CardContent>
+          </Card>
+
           <Card className="bg-white/70 backdrop-blur-sm border-pink-100">
             <CardHeader>
               <CardTitle className="text-2xl text-gray-800">Technologies and Challenges</CardTitle>
@@ -452,18 +470,19 @@ PlantUML Code: [uml code]`}
                   variant="secondary"
             className="bg-white text-purple-700 hover:bg-gray-100"
 >
-           <a href="https://drive.google.com/uc?export=download&id=1PU7XWGpmuodOSB0jLePGljI6lrHoC_hL" download>
-                  <Github className="mr-2" size={16} />
-                  Download UML Generator
-                 </a>
+           <a href="https://github.com/marseljaber/4girls-site/archive/refs/tags/v1.0.0.zip" download>
+             Download UML Generator
+           </a>
+
                  </Button>
 
-              <a href="/manual.pdf" download>
-                 <Button variant="secondary" className="bg-white text-purple-700 hover:bg-gray-100">
-                  <ExternalLink className="mr-2" size={16} />
-                   Download Manual
-                 </Button>
-                 </a>
+             <a href={`${import.meta.env.BASE_URL}manual.pdf`} download>
+              <Button variant="secondary" className="bg-white text-purple-700 hover:bg-gray-100">
+              <ExternalLink className="mr-2" size={16} />
+               Download Manual
+              </Button>
+            </a>
+
 
             </div>
             <div className="mt-8 pt-8 border-t border-pink-400">
